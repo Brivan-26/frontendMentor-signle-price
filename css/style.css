@@ -1,0 +1,121 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-gray);
+  min-height: 100vh;
+}
+
+.container {
+  margin: 20px;
+  max-width: 400px;
+}
+
+.container__content {
+  background: #fff;
+  padding: 30px;
+}
+.container__content h3 {
+  color: var(--cyan);
+  font-weight: 700;
+}
+.container__content h4 {
+  color: var(--bright-yellow);
+  margin: 20px 0;
+}
+.container__content p {
+  color: var(--grayish-blue);
+}
+
+.container__sub {
+  background-color: var(--cyan);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.container__sub h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.container__sub h2 {
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.container__sub h2 span {
+  font-size: 15px;
+  margin-left: 5px;
+  color: hsl(206, 9%, 85%);
+  font-size: 300;
+}
+.container__sub p {
+  color: hsl(206, 9%, 85%);
+  margin-bottom: 20px;
+}
+.container__sub .btn {
+  background: var(--bright-yellow);
+  color: #fff;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container__about {
+  background: hsl(179, 62%, 43%, 0.8);
+  padding: 30px;
+}
+.container__about h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.container__about p {
+  color: var(--light-gray);
+  width: 70%;
+}
+
+@media screen and (min-width: 750px) {
+  .container__content {
+    grid-area: full;
+  }
+  .container__sub {
+    grid-area: left_sub;
+  }
+  .container__about {
+    grid-area: right_about;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      'full full'
+      'left_sub right_about';
+    max-width: 600px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  color: var(--cyan);
+}
